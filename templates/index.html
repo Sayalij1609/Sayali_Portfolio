@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayali Jadhav — AI/ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=5" />
+</head>
+
+<body>
+
+  <!-- GLOBAL PARTICLE CANVAS -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">Sayali<span>.</span></a>
+      <nav class="nav-menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#events">Events</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="section hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-text fade-up">
+        <p class="hero-eyebrow"><span class="dot-live"></span> Open to Opportunities</p>
+        <h1 class="hero-name">Hi, I'm<br /><em>Sayali Jadhav</em></h1>
+        <p class="hero-role">AI/ML Engineering Student &amp; Builder of Intelligent Systems</p>
+        <p class="hero-desc">Third-year B.Tech student specialising in Artificial Intelligence &amp; Machine Learning at
+          RCPIT, Shirpur. I build intelligent, explainable, and agentic AI systems that solve real-world problems.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Connect With Me</a>
+          <a href="#" class="btn btn-ghost" download>Download CV <i class="fas fa-arrow-down"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">9.31</span><span class="stat-label">CGPA</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Hackathons</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Projects</span></div>
+        </div>
+      </div>
+      <div class="hero-visual fade-up delay-2">
+        <div class="hero-glow-orb"></div>
+        <div class="avatar-wrap hero-float">
+          <div class="avatar-ring"></div>
+          <div class="avatar-img">
+            <img src="{{ url_for('static', filename='images/hero.png') }}" alt="Sayali Jadhav" />
+          </div>
+          <div class="avatar-badge"><i class="fas fa-brain"></i> AI/ML</div>
+        </div>
+        <div class="floating-chip chip-1"><i class="fab fa-python"></i> Python</div>
+        <div class="floating-chip chip-2"><i class="fas fa-robot"></i> LLMs</div>
+        <div class="floating-chip chip-3"><i class="fas fa-eye"></i> CV</div>
+        <div class="floating-chip chip-4"><i class="fas fa-microchip"></i> Agentic AI</div>
+        <div class="floating-chip chip-5"><i class="fas fa-wand-magic-sparkles"></i> Gen AI</div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span>Scroll</span><i class="fas fa-arrow-down"></i></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">About Me</div>
+      <div class="about-grid">
+        <div class="about-img-col reveal-left">
+          <div class="about-frame about-float"><img src="{{ url_for('static', filename='images/about.png') }}"
+              alt="Sayali Jadhav" /></div>
+          <div class="about-info-card">
+            <div class="info-row"><span class="info-key">Location</span><span class="info-val">Shirpur,
+                Maharashtra</span></div>
+            <div class="info-row"><span class="info-key">College</span><span class="info-val">RCPIT</span></div>
+            <div class="info-row"><span class="info-key">Batch</span><span class="info-val">2023 - 2027</span></div>
+            <div class="info-row"><span class="info-key">CGPA</span><span class="info-val accent">9.31 / 10</span></div>
+          </div>
+        </div>
+        <div class="about-text-col reveal-right">
+          <h2 class="section-title about-title-animated">Get to <span>Know Me</span></h2>
+          <p>Hello! I'm a dedicated and curious AI &amp; Machine Learning engineering student. My journey in technology
+            is driven by a fascination for problem-solving and a desire to create impactful, data-driven solutions.</p>
+          <p>I have a strong foundation in programming, data structures, and algorithms. My primary passion lies in
+            applying these tools to build and deploy machine learning models from agentic AI systems to explainable AI
+            simulators.</p>
+          <p>When I'm not coding, you can find me exploring the latest breakthroughs in AI, attending tech summits, or
+            mentoring students through the Data Polaris Club.</p>
+          <div class="trait-row">
+            <div class="trait reveal" style="transition-delay:0.1s">
+              <div class="trait-icon"><i class="fas fa-lightbulb"></i></div>
+              <div class="trait-content"><strong>Problem Solving</strong><span>Breaking complex problems into effective,
+                  elegant solutions.</span></div>
+            </div>
+            <div class="trait reveal" style="transition-delay:0.2s">
+              <div class="trait-icon trait-icon-indigo"><i class="fas fa-code"></i></div>
+              <div class="trait-content"><strong>Clean Code</strong><span>Readable, maintainable, and scalable code as a
+                  standard.</span></div>
+            </div>
+            <div class="trait reveal" style="transition-delay:0.3s">
+              <div class="trait-icon trait-icon-purple"><i class="fas fa-comments"></i></div>
+              <div class="trait-content"><strong>Communication</strong><span>Articulating technical concepts clearly to
+                  any audience.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-label">Technical Skills</div>
+      <h2 class="section-title centered about-title-animated">My <span>Expertise</span></h2>
+      <div class="bento-grid">
+
+        <!-- AI/ML (2x2) -->
+        <div class="bento-card bento-ai reveal" style="--accent: var(--cyan);">
+          <div class="bento-glow"></div>
+          <div class="bento-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI / ML &amp; GenAI</h3>
+          <p class="bento-desc">Building intelligent systems with cutting-edge AI architecture.</p>
+          <div class="bento-content bento-visual">
+            <div class="ai-orbit">
+              <div class="core">AI</div>
+              <span class="node skill-item" data-val="95%">Machine Learning</span>
+              <span class="node skill-item" data-val="90%">Deep Learning</span>
+              <span class="node skill-item" data-val="90%">Generative AI</span>
+              <span class="node skill-item" data-val="90%">LLMs</span>
+              <span class="node skill-item" data-val="85%">NLP</span>
+              <span class="node skill-item" data-val="85%">Computer Vision</span>
+              <span class="node skill-item" data-val="80%">XAI</span>
+              <span class="node skill-item" data-val="85%">Agentic AI</span>
+              <span class="node skill-item" data-val="90%">RAG</span>
+              <span class="node skill-item" data-val="80%">Recommendation</span>
+              <span class="node skill-item" data-val="75%">Image Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages (1x2) -->
+        <div class="bento-card bento-lang reveal" style="--accent: var(--indigo);">
+          <div class="bento-glow"></div>
+          <div class="bento-icon"><i class="fas fa-terminal"></i></div>
+          <h3>Languages</h3>
+          <div class="bento-content lang-lines">
+            <div class="lang-line skill-item" data-val="80%"><span class="lang-name" data-pct="80%">C</span>
+              <div class="lang-track">
+                <div class="lang-bar" style="--bar-w: 80%;"></div>
+              </div>
+            </div>
+            <div class="lang-line skill-item" data-val="90%"><span class="lang-name" data-pct="90%">Java (Core)</span>
+              <div class="lang-track">
+                <div class="lang-bar" style="--bar-w: 90%;"></div>
+              </div>
+            </div>
+            <div class="lang-line skill-item" data-val="85%"><span class="lang-name" data-pct="85%">Java (Adv)</span>
+              <div class="lang-track">
+                <div class="lang-bar" style="--bar-w: 85%;"></div>
+              </div>
+            </div>
+            <div class="lang-line skill-item" data-val="80%"><span class="lang-name" data-pct="80%">Spring Core</span>
+              <div class="lang-track">
+                <div class="lang-bar" style="--bar-w: 80%;"></div>
+              </div>
+            </div>
+            <div class="lang-line skill-item" data-val="95%"><span class="lang-name" data-pct="95%">Python</span>
+              <div class="lang-track">
+                <div class="lang-bar" style="--bar-w: 95%;"></div>
+              </div>
+            </div>
+            <div class="lang-line skill-item" data-val="85%"><span class="lang-name" data-pct="85%">JavaScript</span>
+              <div class="lang-track">
+                <div class="lang-bar" style="--bar-w: 85%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases (1x1) -->
+        <div class="bento-card reveal bento-compact" style="--accent: #06b6d4;">
+          <div class="bento-glow"></div>
+          <div class="bento-icon"><i class="fas fa-database"></i></div>
+          <h3>Databases</h3>
+          <div class="bento-badge-container">
+            <span class="bento-badge skill-item" data-val="85%" style="--ring:85%">MySQL</span><span class="bento-badge skill-item"
+              data-val="80%" style="--ring:80%">MongoDB</span><span class="bento-badge skill-item" data-val="80%" style="--ring:80%">Vector DBs</span>
+          </div>
+        </div>
+
+        <!-- Tools (1x1) -->
+        <div class="bento-card reveal bento-compact" style="--accent: #f59e0b;">
+          <div class="bento-glow"></div>
+          <div class="bento-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools</h3>
+          <div class="bento-badge-container">
+            <span class="bento-badge skill-item" data-val="95%">VS Code</span><span class="bento-badge skill-item"
+              data-val="90%">Jupyter</span><span class="bento-badge skill-item" data-val="90%">Colab</span><span
+              class="bento-badge skill-item" data-val="80%">Eclipse</span><span class="bento-badge skill-item"
+              data-val="80%">Power BI</span><span class="bento-badge skill-item" data-val="85%">Docker</span><span
+              class="bento-badge skill-item" data-val="90%">API Integration</span><span class="bento-badge skill-item"
+              data-val="80%">ngrok</span>
+          </div>
+        </div>
+
+        <!-- Core CS (2x1) -->
+        <div class="bento-card reveal bento-wide" style="--accent: #ec4899;">
+          <div class="bento-glow"></div>
+          <div class="wide-icon bento-icon"><i class="fas fa-microchip"></i></div>
+          <div class="wide-content">
+            <h3>Core CS</h3>
+            <div class="bento-badge-container">
+              <span class="bento-badge skill-item" data-val="90%">DSA</span><span class="bento-badge skill-item"
+                data-val="85%">Operating Systems</span><span class="bento-badge skill-item"
+                data-val="85%">DBMS</span><span class="bento-badge skill-item" data-val="85%">Computer
+                Network</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks (2x1) -->
+        <div class="bento-card reveal bento-wide" style="--accent: var(--purple);">
+          <div class="bento-glow"></div>
+          <div class="wide-icon bento-icon"><i class="fas fa-layer-group"></i></div>
+          <div class="wide-content">
+            <h3>Frameworks</h3>
+            <div class="bento-badge-container">
+              <span class="bento-badge skill-item" data-val="90%">NumPy</span><span class="bento-badge skill-item"
+                data-val="90%">Pandas</span><span class="bento-badge skill-item" data-val="85%">Scikit-learn</span><span
+                class="bento-badge skill-item" data-val="85%">PyTorch</span>
+              <span class="bento-badge skill-item" data-val="80%">Transformers</span><span
+                class="bento-badge skill-item" data-val="85%">Flask</span><span class="bento-badge skill-item"
+                data-val="80%">FastAPI</span><span class="bento-badge skill-item" data-val="75%">Django</span>
+              <span class="bento-badge skill-item" data-val="75%">Node.js</span><span class="bento-badge skill-item"
+                data-val="85%">React</span><span class="bento-badge skill-item" data-val="75%">Next.js</span><span
+                class="bento-badge skill-item" data-val="85%">LangChain</span><span class="bento-badge skill-item"
+                data-val="80%">LangGraph</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-label">Education</div>
+      <h2 class="section-title centered about-title-animated">Academic <span>Journey</span></h2>
+      <div class="v-timeline">
+        <div class="v-timeline-line">
+          <div class="v-timeline-line-fill"></div>
+        </div>
+
+        <div class="v-tl-item v-tl-left reveal" style="transition-delay: 0.1s;">
+          <div class="v-tl-node">
+            <div class="v-tl-ripple"></div><i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="v-tl-card" style="--card-accent: var(--cyan);">
+            <div class="v-tl-date">2023 — 2027 (Present)</div>
+            <h3>B.Tech in AI &amp; Machine Learning</h3>
+            <p class="v-tl-org">R. C. Patel Autonomous Institute of Technology, Shirpur</p>
+            <p class="v-tl-desc">Pursuing my degree with a focus on AI, algorithms, and scalable software. Maintaining
+              an outstanding academic record throughout all semesters.</p>
+            <div class="v-tl-tags"><span>Machine Learning</span><span>Deep Learning</span><span>NLP</span><span>Computer
+                Vision</span><span>DSA</span></div>
+            <div class="v-tl-badge">CGPA: 9.31 / 10</div>
+          </div>
+        </div>
+
+        <div class="v-tl-item v-tl-right reveal" style="transition-delay: 0.3s;">
+          <div class="v-tl-node" style="--node-color: var(--purple);">
+            <div class="v-tl-ripple"></div><i class="fas fa-book"></i>
+          </div>
+          <div class="v-tl-card" style="--card-accent: var(--purple);">
+            <div class="v-tl-date">2023</div>
+            <h3>Higher Secondary Education (HSC)</h3>
+            <p class="v-tl-org">H R Patel Science &amp; Arts Girls Junior College, Shirpur</p>
+            <p class="v-tl-desc">Completed 12th with Physics, Chemistry, and Mathematics. Developed strong analytical
+              and problem-solving skills.</p>
+            <div class="v-tl-tags"><span>Physics</span><span>Chemistry</span><span>Mathematics</span></div>
+            <div class="v-tl-badge" style="--card-accent: var(--purple);">HSC: 89%</div>
+          </div>
+        </div>
+
+        <div class="v-tl-item v-tl-left reveal" style="transition-delay: 0.5s;">
+          <div class="v-tl-node" style="--node-color: var(--indigo);">
+            <div class="v-tl-ripple"></div><i class="fas fa-school"></i>
+          </div>
+          <div class="v-tl-card" style="--card-accent: var(--indigo);">
+            <div class="v-tl-date">2021</div>
+            <h3>Secondary Education (SSC)</h3>
+            <p class="v-tl-org">H R Patel Girls Secondary School, Shirpur</p>
+            <p class="v-tl-desc">Completed 10th with distinction. Built a strong foundation in Science, Mathematics, and
+              critical thinking.</p>
+            <div class="v-tl-tags"><span>Science</span><span>Mathematics</span><span>Scholarship Exams</span></div>
+            <div class="v-tl-badge" style="--card-accent: var(--indigo);">SSC: 100%</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title centered">Featured Work</h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-visual" style="background:linear-gradient(135deg,#0d1f2d,#0a2a1a);"><span
+              class="project-icon">&#x1F6A6;</span>
+            <div class="project-overlay"><a href="#" class="proj-link">GitHub <i class="fab fa-github"></i></a><a
+                href="#" class="proj-link">Demo <i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="project-body">
+            <div class="project-label">&#x1F3C6; ISF Junicorn Summit, Dubai</div>
+            <h3>UrbanFlow AI</h3>
+            <p>AI-driven traffic management system using YOLO for real-time vehicle detection and Double DQN
+              Reinforcement Learning to dynamically optimise signal timings.</p>
+            <div class="project-tech"><span>YOLO</span><span>RL / DQN</span><span>Python</span><span>OpenCV</span></div>
+          </div>
+        </div>
+        <div class="project-card reveal delay-1">
+          <div class="project-visual" style="background:linear-gradient(135deg,#1a0d2e,#0d1a2e);"><span
+              class="project-icon">&#x1F3E5;</span>
+            <div class="project-overlay"><a href="#" class="proj-link">GitHub <i class="fab fa-github"></i></a><a
+                href="#" class="proj-link">Demo <i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="project-body">
+            <div class="project-label">&#x1F52C; Ongoing</div>
+            <h3>MedAgentix AI</h3>
+            <p>Multi-agent healthcare system using LLMs and RAG for symptom analysis and disease prediction. Integrated
+              Explainable AI for transparent medical recommendations.</p>
+            <div class="project-tech"><span>LLMs</span><span>RAG</span><span>XAI</span><span>LangChain</span></div>
+          </div>
+        </div>
+        <div class="project-card reveal delay-2">
+          <div class="project-visual" style="background:linear-gradient(135deg,#1a0d0d,#0d1a2e);"><span
+              class="project-icon">&#x1F6E1;&#xFE0F;</span>
+            <div class="project-overlay"><a href="#" class="proj-link">GitHub <i class="fab fa-github"></i></a><a
+                href="#" class="proj-link">Demo <i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="project-body">
+            <div class="project-label">&#x1F510; Feb 2026</div>
+            <h3>XAI Social Engineering Simulator</h3>
+            <p>AI simulation platform for phishing, smishing, vishing, and baiting attacks. XAI provides insights into
+              attack strategies with ~97% ML classifier accuracy.</p>
+            <div class="project-tech"><span>XAI</span><span>Flask</span><span>Ollama</span><span>Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-visual" style="background:linear-gradient(135deg,#0d1a1a,#1a1a0d);"><span
+              class="project-icon">&#x1F91A;</span>
+            <div class="project-overlay"><a href="#" class="proj-link">GitHub <i class="fab fa-github"></i></a><a
+                href="#" class="proj-link">Demo <i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="project-body">
+            <div class="project-label">&#x1F441;&#xFE0F; June 2025</div>
+            <h3>Hand Gesture Desktop Controller</h3>
+            <p>Real-time gesture recognition enabling scrolling, clicking, and app switching through webcam input —
+              touchless human-computer interaction.</p>
+            <div class="project-tech"><span>Python</span><span>OpenCV</span><span>MediaPipe</span></div>
+          </div>
+        </div>
+        <div class="project-card reveal delay-1">
+          <div class="project-visual" style="background:linear-gradient(135deg,#0d1428,#1a0d1a);"><span
+              class="project-icon">&#x1F4F0;</span>
+            <div class="project-overlay"><a href="#" class="proj-link">GitHub <i class="fab fa-github"></i></a><a
+                href="#" class="proj-link">Demo <i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="project-body">
+            <div class="project-label">&#x1F4E1; GenAI</div>
+            <h3>AI News Explanation Agent</h3>
+            <p>Full-stack agentic news platform powered by FastAPI, Flask, and Ollama (llama3.2) with a custom
+              dark-themed frontend for intelligent news summarisation.</p>
+            <div class="project-tech"><span>FastAPI</span><span>Ollama</span><span>llama3.2</span><span>Flask</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title centered">Work &amp; Training</h2>
+      <div class="v-timeline">
+        <div class="v-timeline-line">
+          <div class="v-timeline-line-fill"></div>
+        </div>
+
+        <div class="v-tl-item v-tl-left">
+          <div class="v-tl-node">
+            <div class="v-tl-ripple"></div><i class="fas fa-building"></i>
+          </div>
+          <div class="v-tl-card" style="--card-accent: var(--cyan);">
+            <div class="v-tl-date">Apr 2025 — Jul 2025</div>
+            <h3>AI/ML Mentee — Pragati Cohort 5</h3>
+            <p class="v-tl-org">Infosys Springboard</p>
+            <p class="v-tl-desc">Selected for "Pragati: Path to Future — Cohort 5," a 12-week empowerment initiative for
+              women in tech. Implemented AI/ML concepts through guided projects and mentorship.</p>
+          </div>
+        </div>
+
+        <div class="v-tl-item v-tl-right">
+          <div class="v-tl-node" style="--node-color: var(--indigo);">
+            <div class="v-tl-ripple"></div><i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="v-tl-card" style="--card-accent: var(--indigo);">
+            <div class="v-tl-date">1 Month</div>
+            <h3>Java Development Intern</h3>
+            <p class="v-tl-org">R3sys</p>
+            <p class="v-tl-desc">Worked on Core &amp; Advanced Java, Spring Core, and backend development, strengthening
+              OOP principles and practical coding skills in a professional environment.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section" id="events">
+    <div class="container">
+      <div class="section-label">Events &amp; Hackathons</div>
+      <h2 class="section-title centered">Conferences &amp; Competitions</h2>
+      <div class="events-grid">
+        <div class="event-card reveal">
+          <div class="event-icon">&#x1F30D;</div>
+          <div class="event-date">Dec 2024</div>
+          <h4>DevFest Indore - GDG</h4>
+          <p>Attended the AI/ML + Cloud track, learning from Google, IBM, and Infosys experts about AI for cloud
+            security and serverless architecture.</p>
+        </div>
+        <div class="event-card reveal delay-1">
+          <div class="event-icon">&#x1F916;</div>
+          <div class="event-date">Feb 2025</div>
+          <h4>Mumbai Tech Week - Mumb.AI</h4>
+          <p>Participated in Asia's largest AI event at Jio World Convention Centre. Gained insights from visionary
+            keynotes and networked with India's AI leaders.</p>
+        </div>
+        <div class="event-card reveal delay-2">
+          <div class="event-icon">&#x1F680;</div>
+          <div class="event-date">Apr - Jul 2025</div>
+          <h4>Infosys Pragati Cohort 5</h4>
+          <p>12-week transformative program for women in tech with mentorship, skill-building, and real-world AI/ML
+            project experience.</p>
+        </div>
+        <div class="event-card reveal">
+          <div class="event-icon">&#x1F3C6;</div>
+          <div class="event-date">2024</div>
+          <h4>ISF Junicorn Summit - Dubai</h4>
+          <p>Selected to present UrbanFlow AI at the ISF Junicorn Summit in Dubai - a global platform celebrating young
+            innovators.</p>
+        </div>
+        <div class="event-card reveal delay-1">
+          <div class="event-icon">&#x26A1;</div>
+          <div class="event-date">2024</div>
+          <h4>COEP MindSpark Hackathon</h4>
+          <p>Qualified Round 1 of the prestigious 24-hour hackathon, competing among top student developers across
+            India.</p>
+        </div>
+        <div class="event-card reveal delay-2">
+          <div class="event-icon">&#x1F9EC;</div>
+          <div class="event-date">2024</div>
+          <h4>Genathon - IIIT Nagpur</h4>
+          <p>Participated in Genathon organised by IIIT Nagpur, gaining competitive hackathon experience in AI-driven
+            problem solving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-label">Achievements</div>
+      <h2 class="section-title centered">Milestones</h2>
+      <div class="ach-grid">
+        <div class="ach-card reveal"><span class="ach-icon">&#x1F4CA;</span>
+          <h4>GATE DA 2026</h4>
+          <p>Qualified with All India Rank <strong>10584</strong></p>
+        </div>
+        <div class="ach-card reveal delay-1"><span class="ach-icon">&#x1F30D;</span>
+          <h4>ISF Dubai Summit</h4>
+          <p>Selected to present at global innovator platform</p>
+        </div>
+        <div class="ach-card reveal delay-2"><span class="ach-icon">&#x26A1;</span>
+          <h4>COEP MindSpark</h4>
+          <p>Qualified Round 1 of 24-hour hackathon</p>
+        </div>
+        <div class="ach-card reveal"><span class="ach-icon">&#x1F9EC;</span>
+          <h4>Genathon - IIIT Nagpur</h4>
+          <p>Participated in competitive AI hackathon</p>
+        </div>
+        <div class="ach-card reveal delay-1"><span class="ach-icon">&#x1F393;</span>
+          <h4>Academic Excellence</h4>
+          <p>CGPA <strong>9.31</strong> - consistent top performer</p>
+        </div>
+        <div class="ach-card reveal delay-2"><span class="ach-icon">&#x1F3C5;</span>
+          <h4>5+ Hackathons</h4>
+          <p>National-level competitive experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTRA CURRICULAR -->
+  <section class="section" id="extra">
+    <div class="container">
+      <div class="section-label">Extra-Curricular</div>
+      <h2 class="section-title centered">Beyond the Classroom</h2>
+      <div class="extra-grid">
+        <div class="extra-card reveal"><i class="fas fa-star"></i>
+          <h4>Co-Head, Data Polaris Club</h4>
+          <p>Leading the data science club at RCPIT, organising workshops and technical events.</p>
+        </div>
+        <div class="extra-card reveal delay-1"><i class="fas fa-chalkboard-teacher"></i>
+          <h4>ML Workshop Facilitator</h4>
+          <p>Conducted machine learning guidance sessions and workshops for fellow students.</p>
+        </div>
+        <div class="extra-card reveal delay-2"><i class="fas fa-pen-nib"></i>
+          <h4>Editorial Committee</h4>
+          <p>Member of the Editorial &amp; Magazine Committee for AIML Department at RCPIT.</p>
+        </div>
+        <div class="extra-card reveal"><i class="fas fa-code"></i>
+          <h4>Competitive Coding</h4>
+          <p>Active on LeetCode, CodeChef, GeeksforGeeks, and HackerRank - sharpening algorithms daily.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title centered">Get In Touch</h2>
+      <p class="contact-sub">Open to AI/ML internships, GenAI projects, research collaborations, and hackathons.</p>
+      <div class="contact-grid">
+        <div class="contact-links reveal">
+          <a href="mailto:sayalijadhav162005@gmail.com" class="contact-item"><i class="fas fa-envelope"></i>
+            <div><strong>Email</strong><span>sayalijadhav162005@gmail.com</span></div>
+          </a>
+          <a href="https://linkedin.com/in/sayali-jadhav-b4263827b" target="_blank" class="contact-item"><i
+              class="fab fa-linkedin"></i>
+            <div><strong>LinkedIn</strong><span>linkedin.com/in/sayali-jadhav</span></div>
+          </a>
+          <a href="https://github.com/Sayalij1609" target="_blank" class="contact-item"><i class="fab fa-github"></i>
+            <div><strong>GitHub</strong><span>github.com/Sayalij1609</span></div>
+          </a>
+          <a href="tel:9359582185" class="contact-item"><i class="fas fa-phone"></i>
+            <div><strong>Phone</strong><span>+91 93595 82185</span></div>
+          </a>
+          <div class="contact-item no-link"><i class="fas fa-map-marker-alt"></i>
+            <div><strong>Location</strong><span>Shirpur, Maharashtra, India</span></div>
+          </div>
+        </div>
+        <form class="contact-form reveal delay-1" id="contactForm">
+          <div class="form-row">
+            <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your Name"
+                required /></div>
+            <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com"
+                required /></div>
+          </div>
+          <div class="form-group"><label>Subject</label><input type="text" name="subject"
+              placeholder="Internship / Collaboration / Research" /></div>
+          <div class="form-group"><label>Message</label><textarea name="message" rows="5"
+              placeholder="Tell me about your project or opportunity..."></textarea></div>
+          <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+          <div class="form-msg" id="formMsg"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">Sayali<span>.</span></div>
+      <p>Designed &amp; built by Sayali Bharat Jadhav &middot; RCPIT Shirpur &middot; 2026</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Sayalij1609" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/sayali-jadhav-b4263827b" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:sayalijadhav162005@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}?v=5"></script>
+</body>
+
+</html>
