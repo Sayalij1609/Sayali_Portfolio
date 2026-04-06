@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ══════════════════════════════════════
   //  STAGGERED REVEAL — Grid Cards
   // ══════════════════════════════════════
-  const grids = document.querySelectorAll('.projects-grid, .events-grid, .ach-grid, .extra-grid, .hex-grid');
+  const grids = document.querySelectorAll('.projects-grid-v2, .events-grid, .ach-grid, .extra-grid, .hex-grid');
   grids.forEach(grid => {
     grid.classList.add('stagger-parent');
     const cards = grid.children;
@@ -430,24 +430,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ══════════════════════════════════════
-  //  3D TILT — Project Cards
+  //  3D TILT — Project Cards V2
   // ══════════════════════════════════════
-  const projectCards = document.querySelectorAll('.project-card');
-  projectCards.forEach(card => {
+  const projCards = document.querySelectorAll('.proj-card');
+  projCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -6;
-      const rotateY = ((x - centerX) / centerX) * 6;
-      card.style.transform = `translateY(-8px) perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      const rotateX = ((y - centerY) / centerY) * -4;
+      const rotateY = ((x - centerX) / centerX) * 4;
+      card.style.transform = `translateY(-10px) perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+      // Move glow towards cursor
+      const glow = card.querySelector('.proj-card-glow');
+      if (glow) {
+        glow.style.top = `${y - 100}px`;
+        glow.style.left = `${x - 100}px`;
+        glow.style.right = 'auto';
+      }
     });
-    card.addEventListener('mouseleave', () => {
+    card.addEventListener('mouseleave', (e) => {
       card.style.transform = '';
+      const glow = card.querySelector('.proj-card-glow');
+      if (glow) {
+        glow.style.top = '';
+        glow.style.left = '';
+        glow.style.right = '';
+      }
     });
   });
+
+
+  // ══════════════════════════════════════
+  //  PROJECT CATEGORY FILTER
+  // ══════════════════════════════════════
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const projCardEls = document.querySelectorAll('.proj-card[data-category]');
+  if (filterPills.length) {
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        // Update active state
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const filter = pill.getAttribute('data-filter');
+
+        projCardEls.forEach((card, i) => {
+          const cats = card.getAttribute('data-category') || '';
+          const show = filter === 'all' || cats.includes(filter);
+
+          if (show) {
+            card.classList.remove('filter-hide');
+            card.classList.add('filter-show');
+            card.style.position = '';
+            card.style.visibility = '';
+            card.style.animationDelay = `${i * 0.08}s`;
+          } else {
+            card.classList.remove('filter-show');
+            card.classList.add('filter-hide');
+          }
+        });
+      });
+    });
+  }
 
 
   // ══════════════════════════════════════
