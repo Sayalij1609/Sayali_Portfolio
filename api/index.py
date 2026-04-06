@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates", static_folder="../static")
 
 @app.route('/')
 def index():
@@ -13,9 +13,12 @@ def contact():
     email = data.get('email', '')
     subject = data.get('subject', '')
     message = data.get('message', '')
-    # Add email sending logic here if needed
+
+    # Just logs (works in Vercel logs)
     print(f"New message from {name} ({email}): {subject} — {message}")
+
     return jsonify({'status': 'success', 'message': 'Message received!'})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# 🔥 REQUIRED for Vercel
+def handler(environ, start_response):
+    return app(environ, start_response)
