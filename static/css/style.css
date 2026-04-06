@@ -673,7 +673,7 @@ button { border:none; cursor:pointer; font-family:inherit; }
 .ai-orbit .node:nth-child(9) { bottom: 35%; left: 24%; z-index: 3; }
 .ai-orbit .node:nth-child(10) { top: 2%; left: 45%; z-index: 3; }
 .ai-orbit .node:nth-child(11) { bottom: 4%; left: 45%; z-index: 3; }
-.ai-orbit .node:nth-child(12) { top: 75%; left: 4%; z-index: 3; }
+.ai-orbit .node:nth-child(12) { top: 70%; right: 15%; z-index: 3; }
 
 /* ─── Languages Progress Lines ─── */
 .lang-lines { display: flex; flex-direction: column; gap: 14px; margin-top: auto; }
