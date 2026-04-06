@@ -229,9 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.4 });
   sections.forEach(s => activeObs.observe(s));
 
-
   // ══════════════════════════════════════
-  //  CONTACT FORM
+  //  CONTACT FORM (AJAX for Web3Forms)
   // ══════════════════════════════════════
   const form    = document.getElementById('contactForm');
   const formMsg = document.getElementById('formMsg');
@@ -243,22 +242,27 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
       btn.disabled = true;
 
-      const data = {
-        name:    form.name.value,
-        email:   form.email.value,
-        subject: form.subject.value,
-        message: form.message.value,
-      };
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
 
       try {
-        const res    = await fetch('/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+        
         const result = await res.json();
-        if (result.status === 'success') {
+        
+        if (res.status === 200) {
           formMsg.textContent = '✓ Message sent successfully!';
           formMsg.style.color = 'var(--cyan)';
           form.reset();
         } else {
-          formMsg.textContent = 'Something went wrong. Please try again.';
+          formMsg.textContent = result.message || 'Something went wrong. Please try again.';
           formMsg.style.color = 'var(--purple)';
         }
       } catch (err) {

@@ -500,9 +500,9 @@ button { border:none; cursor:pointer; font-family:inherit; }
 ═══════════════════════════════════════════ */
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  grid-auto-rows: minmax(210px, auto); /* Base height governing row spanning, expands if needed */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  grid-auto-rows: minmax(210px, auto);
 }
 
 .bento-card {
@@ -571,20 +571,26 @@ button { border:none; cursor:pointer; font-family:inherit; }
 
 /* ─── Grid Spans ─── */
 .bento-ai { grid-column: span 2; grid-row: span 2; }
-.bento-lang { grid-column: span 1; grid-row: span 2; }
-.bento-compact { grid-column: span 1; grid-row: span 1; padding: 24px; }
-/* Wide cards lay out horizontally */
-.bento-wide { grid-column: span 2; grid-row: span 1; flex-direction: row; align-items: center; gap: 24px; }
+.bento-wide { grid-column: span 2; grid-row: span 1; }
+.bento-tall { grid-column: span 1; grid-row: span 2; }
+.bento-standard { grid-column: span 1; grid-row: span 1; padding: 28px; }
 
-.wide-icon {
-  margin-bottom: 0;
-  font-size: 2.5rem;
-  background: color-mix(in srgb, var(--accent) 8%, transparent);
-  padding: 20px;
-  border-radius: 18px;
-  border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+/* Wide cards lay out vertically but gracefully */
+.wide-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
 }
-.wide-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.wide-icon {
+  font-size: 2rem;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+}
+.wide-content { flex: 1; display: flex; flex-direction: column; }
 
 /* ─── AI/ML Orbit Visualizer ─── */
 .bento-visual {
@@ -688,7 +694,8 @@ button { border:none; cursor:pointer; font-family:inherit; }
 .lang-bar.animated { width: var(--bar-w) !important; }
 
 /* ─── Badges (Tools/DB/Frameworks) ─── */
-.bento-badge-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+/* ─── Badges (Tools/DB/Frameworks) ─── */
+.bento-badge-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
 .bento-badge {
   font-size: 0.75rem;
   font-family: var(--font-mono);
@@ -1428,6 +1435,18 @@ button { border:none; cursor:pointer; font-family:inherit; }
 .event-date { font-family:var(--font-mono); font-size:.7rem; color:var(--cyan); letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
 .event-card h4 { font-size:.95rem; font-weight:600; color:var(--text-1); margin-bottom:10px; }
 .event-card p { font-size:.88rem; color:var(--text-3); line-height:1.65; }
+.event-linkedin-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--cyan);
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+.event-linkedin-link:hover {
+  text-shadow: 0 0 10px rgba(0,245,255,0.4);
+  transform: translateX(4px);
+}
 
 /* ── ACHIEVEMENTS ── */
 .ach-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
@@ -1484,6 +1503,39 @@ a.contact-item:hover { border-color:var(--border-hover); background:var(--bg-car
 .form-group input::placeholder, .form-group textarea::placeholder { color:var(--text-3); }
 .form-group input:focus, .form-group textarea:focus { border-color:rgba(0,245,255,0.4); }
 .form-msg { font-family:var(--font-mono); font-size:.78rem; color:var(--cyan); min-height:20px; }
+
+/* Horizontal profiles below contact */
+.coding-profiles-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 64px;
+}
+.cp-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  transition: all var(--transition);
+}
+.cp-link i {
+  color: var(--cyan);
+  font-size: 1.1rem;
+}
+.cp-link:hover {
+  border-color: var(--cyan);
+  color: var(--text-1);
+  box-shadow: 0 0 16px rgba(0,245,255,0.15);
+  transform: translateY(-3px);
+}
+
 
 /* ── FOOTER ── */
 .footer { padding:40px 0; border-top:1px solid var(--border); background:rgba(8,12,20,0.9); backdrop-filter:blur(10px); position:relative; z-index:1; }
