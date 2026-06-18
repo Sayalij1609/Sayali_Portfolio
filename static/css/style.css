@@ -1576,13 +1576,41 @@ a.contact-item:hover { border-color:var(--border-hover); background:var(--bg-car
   .nav-menu.open { display:flex; flex-direction:column; gap:0; position:fixed; top:68px; left:0; right:0; bottom:0; background:rgba(10,10,10,0.98); padding:32px 24px; border-top:1px solid var(--border); }
   .nav-menu.open a { padding:14px 0; border-bottom:1px solid var(--border); font-size:1rem; }
   .nav-cta { display:none; }
-  .hero-inner { grid-template-columns:1fr; text-align:center; }
+  .hero-inner { grid-template-columns:1fr; text-align:center; gap:40px; }
   .hero-desc { margin-left:auto; margin-right:auto; }
   .hero-actions { justify-content:center; }
   .hero-stats { margin:0 auto; }
-  .hero-visual { display:none; }
+
+  /* Show hero image on mobile — compact and centered */
+  .hero-visual {
+    display:flex;
+    order:-1;
+    height:280px;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+  }
+  .hero-visual .avatar-wrap { width:200px; height:200px; }
+  .hero-visual .hero-glow-orb { width:240px; height:240px; }
+  .hero-visual .floating-chip { display:none; }
+  .hero-visual .avatar-badge { font-size:.65rem; padding:5px 12px; bottom:-6px; }
+
+  /* Show about image on mobile — centered and compact */
   .about-grid { grid-template-columns:1fr; }
-  .about-img-col { display:none; }
+  .about-img-col {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .about-img-col .about-frame {
+    width:220px;
+    margin:0 auto;
+  }
+  .about-img-col .about-info-card {
+    max-width:280px;
+    margin:16px auto 0;
+  }
   .contact-grid { grid-template-columns:1fr; }
   .form-row { grid-template-columns:1fr; }
   .footer-inner { flex-direction:column; text-align:center; }
