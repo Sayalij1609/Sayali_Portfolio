@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let W, H, particles = [], mouse = { x: -9999, y: -9999 };
   const PARTICLE_COUNT = 110;
-  const COLORS = ['#00f5ff', '#6366f1', '#a855f7', '#00f5ff', '#ffffff'];
+  const COLORS = ['#e8618c', '#c084b0', '#d4a574', '#e8618c', '#f4f0ef'];
 
   function resize() {
     W = canvas.width  = window.innerWidth;
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const alpha = (1 - d / MAX_DIST) * 0.12;
           ctx.save();
           ctx.globalAlpha = alpha;
-          ctx.strokeStyle = '#00f5ff';
+          ctx.strokeStyle = '#e8618c';
           ctx.lineWidth = 0.6;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
